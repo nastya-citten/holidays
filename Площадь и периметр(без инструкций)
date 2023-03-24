@@ -1,0 +1,28 @@
+#include<iostream>
+#include <math.h>
+using namespace std;
+int main(){
+    cout<<"Write the name of the figure which area and perimetr you want to know";
+    string fig;
+    float S;
+    float P;
+    cin>>fig;
+    if(fig=="triangle"){
+        float a, b, c;
+        cin>>a>>b>>c;
+        float p=(a+b+c)/2;
+        S=sqrt(p*(p-a)*(p-b)*(p-c));
+        P=2*p;}
+    else  if(fig=="rectangle"){
+        float a,b;
+        cin>>a>>b;
+        S=a*b;
+        P=a+b;}
+    else if(fig=="round"){
+        float r;
+        cin>>r;
+        S=3.14*r*r;
+        P=2*3.14*r;
+    }
+cout<<S<<endl<<P;
+}
